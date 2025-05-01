@@ -1,4 +1,10 @@
 {
+  "name": "quai_antique_front",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "start chrome http://localhost:3000",
+    "build-css": "sass ./scss/custom.scss ./css/main.css"
+  },
   "dependencies": {
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3"
