@@ -4,7 +4,8 @@
 $primary: #906427;
 $secondary: #b6ac97;
 $dark: #392c1e;
-$font-family-sans-serif: "Montserrat", sans-serif;
+$font-family-sans-serif: "Montserrat", sans-serif !default;
+$font-family-serif: "Hind Madurai", serif !default;
 
 // 2. Import complet de Bootstrap
 @import "../node_modules/bootstrap/scss/bootstrap";
