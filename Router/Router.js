@@ -62,3 +62,18 @@ window.onpopstate = LoadContentPage;
 window.route = routeEvent;
 // Chargement du contenu de la page au chargement initial
 LoadContentPage();
+
+// Interception des clics sur les liens internes
+document.addEventListener("click", function (e) {
+  const target = e.target.closest("a");
+
+  // Vérifie si c'est un lien interne
+  if (target && target.href.startsWith(window.location.origin)) {
+    // Évite les liens externes ou les ancres #
+    if (!target.href.includes("#") && !target.target) {
+      e.preventDefault();
+      window.history.pushState({}, "", target.href);
+      LoadContentPage();
+    }
+  }
+});
