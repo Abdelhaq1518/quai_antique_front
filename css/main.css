@@ -11868,12 +11868,16 @@ footer.footer {
 }
 
 main {
-  margin-bottom: 250px;
+  margin-bottom: 8.75rem;
 }
 
 p {
-  font-family: "Hind Madurai", serif;
-  font-size: 18px;
+  font-size: 1.375rem;
+}
+@media (max-width: 768px) {
+  p {
+    font-size: 0.875rem;
+  }
 }
 
 /* Titre homepage*/
@@ -11900,4 +11904,43 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/*Homepage*/
+.text-justify {
+  text-align: justify;
+}
+
+/*Galerie*/
+/*Images centrées*/
+.image-card {
+  position: relative;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Effet au survol*/
+.image-card {
+  position: relative;
+}
+.image-card:hover .titre-image {
+  opacity: 1;
+}
+.image-card:hover img {
+  filter: brightness(0.3);
+}
+.image-card img {
+  transition: all 0.3s;
+}
+.image-card .titre-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
 }/*# sourceMappingURL=main.css.map */
