@@ -1,18 +1,35 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import "custom";
 
-html {
-  position: relative;
-  min-height: 100%;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-footer.footer {
-  padding: 15px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+header {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
+.navbar .nav-link {
+  color: #f2f0f5;
+  font-size: 1.375rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 main {
-  margin-bottom: 8.75rem;
+  flex: 1;
+}
+
+.footer {
+  padding: 15px;
+  background-color: #343a40; // Couleur de fond du footer
+  color: white;
 }
 
 p {
@@ -26,6 +43,7 @@ p {
 
 .hero-scene {
   position: relative;
+  margin-bottom: 15px;
   &::before {
     content: "";
     position: absolute;
@@ -92,4 +110,8 @@ p {
     opacity: 0;
     transition: all 0.3s;
   }
+}
+/*Page connexion formulaire*/
+.form-label {
+  color: $primary;
 }
