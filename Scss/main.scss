@@ -111,6 +111,29 @@ p {
     transition: all 0.3s;
   }
 }
+/*Icones édition/suppression images*/
+.image-card {
+  position: relative;
+  &:hover {
+    .titre-image,
+    .action-image-buttons {
+      opacity: 1;
+    }
+  }
+
+  .action-image-buttons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    opacity: 0;
+    transition: all 0.3s;
+  }
+}
 /*Page connexion formulaire*/
 .form-label {
   color: $primary;

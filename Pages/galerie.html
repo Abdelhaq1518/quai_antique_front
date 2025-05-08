@@ -5,6 +5,18 @@
 </div>
 
 <div class="container py-4">
+  <!-- Bouton Ajouter une photo -->
+  <div class="text-center mb-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#editionModale"
+    >
+      Ajouter une photo
+    </button>
+  </div>
+
   <div class="row row-cols-2 row-cols-lg-3 g-3">
     <div class="col">
       <div class="image-card text-white">
@@ -14,6 +26,24 @@
           alt="homard "
         />
         <p class="titre-image">Homard du Chef</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="col">
@@ -24,6 +54,24 @@
           alt="Lisandre"
         />
         <p class="titre-image">Filet de lisandre</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="col">
@@ -34,6 +82,24 @@
           alt="chou salé"
         />
         <p class="titre-image">Chou salé</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="col">
@@ -44,12 +110,48 @@
           alt="champignons préparés"
         />
         <p class="titre-image">Champignonette</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="col">
       <div class="image-card text-white">
         <img src="../images/plat5.jpg" class="img-fluid rounded" alt="entrée" />
         <p class="titre-image">Bouchée gourmet</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
       </div>
     </div>
     <div class="col">
@@ -60,6 +162,326 @@
           alt="Pâtes crevettes"
         />
         <p class="titre-image">Pâtes crevettes</p>
+        <div class="action-image-buttons">
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#editionModale"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#DeletePhotoModal"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bouton Réserver -->
+  <div class="text-center mt-4">
+    <a href="/reservations" class="btn btn-primary">Réserver</a>
+  </div>
+</div>
+<!-- Modale edition -->
+<div
+  class="modal fade"
+  id="editionModale"
+  tabindex="-1"
+  aria-labelledby="editionModaleLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title fs-5" id="editionModaleLabel">
+          Titre de la modale
+        </h2>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+              <div class="mb-3">
+                <label for="NamePhotoInput" class="form-label">Titre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="NamePhotoInput"
+                  name="Titre"
+                  placeholder="Lasagnes à la bolognese"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ImageInput" class="form-label">Image</label>
+                <input
+                  type="file"
+                  class="form-control"
+                  id="ImageInput"
+                  name="Image"
+                  required
+                />
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">
+                  Enregistrer
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modale suppression pour Homard du Chef -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat1">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat1.jpg"
+          alt="Homard du Chef"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Homard du Chef</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale suppression pour Filet de lisandre -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat2">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat2.jpg"
+          alt="Filet de lisandre"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Filet de lisandre</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale suppression pour Chou salé -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel-plat3"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat3">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat3.jpg"
+          alt="Chou salé"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Chou salé</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale suppression pour Champignonette -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel-plat4"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat4">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat4.jpg"
+          alt="Champignonette"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Champignonette</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale suppression pour Bouchée gourmet -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel-plat5"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat5">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat5.jpg"
+          alt="Bouchée gourmet"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Bouchée gourmet</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modale suppression pour Pâtes crevettes -->
+<div
+  class="modal fade"
+  id="DeletePhotoModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel-plat6"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel-plat6">
+          Supprimer la photo
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Fermer"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Êtes-vous sûr de vouloir supprimer cette photo ?</p>
+        <img
+          src="../images/plat6.jpg"
+          alt="Pâtes crevettes"
+          class="img-fluid rounded mb-3"
+        />
+        <p><strong>Pâtes crevettes</strong></p>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Annuler
+        </button>
+        <button type="button" class="btn btn-danger">Supprimer</button>
       </div>
     </div>
   </div>
